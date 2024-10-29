@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: (211, 216, 232);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: #0d1224;
+}
+
+.logo-container {
+  max-height: 100px; /* Set your desired max height */
+  width: auto;       /* Auto adjust the width */
+}
+
+.responsive-logo {
+  height: auto;      /* Ensure the height adjusts automatically */
+  width: 100%;       /* Make sure the width fills the container */
+  object-fit: contain; /* Ensures the aspect ratio is maintained */
+}
