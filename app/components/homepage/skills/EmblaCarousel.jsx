@@ -24,6 +24,9 @@ const EmblaCarousel = ({ children, reverse = false, speed = 1, startDelay = 2200
     if (emblaApi) {
       emblaApi.reInit();
     }
+    return () => {
+      if (emblaApi) emblaApi.destroy(); // Clean up Embla on unmount
+    };
   }, [emblaApi]);
 
   return (

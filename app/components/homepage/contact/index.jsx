@@ -6,7 +6,7 @@ import emailjs from 'emailjs-com';
 
 //Lotti
 import AnimationLottie from '../../helper/animation-lottie';
-import newAnimation from '/public/lottie/contact.json';  // <- New Lottie file
+import newAnimation from '/public/lottie/contact.json';  // <- Choose/update Lottie file here
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -119,7 +119,7 @@ function Contact() {
 
         <div className="order-1 md:order-1 relative rounded-lg">
         <div className="max-w-full md:max-w-[442px] mx-auto">
-              <AnimationLottie animationPath={newAnimation} />  {/* Use new Lottie file here */}
+              <AnimationLottie animationPath={newAnimation} />
           </div>
         </div>
       </div>

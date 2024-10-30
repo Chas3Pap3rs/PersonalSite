@@ -77,7 +77,7 @@ function Landing() {
 
             {/* Bottom section */}
             <div className="w-full text-right">
-              <h2 className="text-xl mr-[42%]">and I'm a...</h2>
+              <h2 className="text-xl mr-[42%]">and I&apos;m a...</h2>
             </div>
           </div>
 

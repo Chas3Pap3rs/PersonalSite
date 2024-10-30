@@ -18,9 +18,10 @@ function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false); // State to control menu visibility
 
   useEffect(() => {
+    if (typeof window === 'undefined') return; // Ensure code only runs client-side
+    
     const handleResize = debounce(() => {
       const width = window.innerWidth;
-
       if (width >= 1280) {
         setImageSrc("/chasepoulton-com.png");
       } else if (width >= 900) {
@@ -28,15 +29,11 @@ function Navbar() {
       } else {
         setImageSrc("/cp.png");
       }
-    }, 100); // Debounced by 100ms
-
-    // Initial check
+    }, 100);
+    
     handleResize();
-
-    // Add event listener
     window.addEventListener("resize", handleResize);
-
-    // Cleanup event listener
+  
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 

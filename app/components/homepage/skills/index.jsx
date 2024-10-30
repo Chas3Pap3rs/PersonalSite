@@ -92,8 +92,6 @@ function Skills() {
 
 export default Skills;
 
-// "use client"
-
 // import EmblaCarousel from './EmblaCarousel'; // Assuming it's in the same directory
 // import { DiJavascript1, DiNodejs, DiReact, DiMongodb, DiPython, DiGit, DiJava } from 'react-icons/di';
 // import { SiRedis, SiFirebase, SiNextdotjs, SiSolidity, SiPostgresql, SiVisualstudiocode, SiPostman, SiSlack, SiVercel, SiMacos } from 'react-icons/si';

@@ -36,7 +36,7 @@ function About() {
           </div>
 
           <p className="text-gray-200 text-sm lg:text-lg !leading-10">
-              {personalData.description}
+              {personalData.about}
           </p>
 
           <div className="my-5 flex w-full justify-center lg:justify-end">
