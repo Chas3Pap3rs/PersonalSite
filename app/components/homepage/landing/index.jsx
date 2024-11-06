@@ -3,17 +3,19 @@
 import { personalData } from '@/utils/data/personal-data';
 import Image from 'next/image';
 import Link from 'next/link';
+import dynamic from 'next/dynamic';
 
-//Icons
+// Icons
 import { MdDownload } from "react-icons/md";
 import { RiContactsFill } from "react-icons/ri";
 
-//Lotti
-import AnimationLottie from '../../helper/animation-lottie';
-import newAnimation from '/public/lottie/robot.json';  // <- New Lottie file
+// Dynamically import AnimationLottie with SSR disabled
+// const AnimationLottie = dynamic(() => import('../../helper/animation-lottie'), { ssr: false });
+// import newAnimation from '/public/lottie/robot.json';  // New Lottie file
 
-//Type
+// Typewriter component
 import Type from '../Type';
+
 
 function Landing() {
   return (
@@ -54,10 +56,9 @@ function Landing() {
         </div>
 
         <div className="order-1 lg:order-2 relative rounded-lg">
-          {/* Updated Lottie Animation */}
-          <div className="max-w-full lg:max-w-none md:max-w-[442px] mx-auto">
-            <AnimationLottie animationPath={newAnimation} />  {/* Use new Lottie file here */}
-          </div>
+          {/*<div className="max-w-full lg:max-w-none md:max-w-[442px] mx-auto">
+            <AnimationLottie animationPath={newAnimation} /> 
+          </div> */}
 
           {/* Stacked vertically in all screen sizes */}
           <div className="flex flex-col items-center justify-center w-full mt-6 space-y-1">

@@ -6,8 +6,8 @@ import emailjs from 'emailjs-com';
 import dynamic from 'next/dynamic';
 
 // Dynamically import AnimationLottie with SSR disabled
-const AnimationLottie = dynamic(() => import('../../helper/animation-lottie'), { ssr: false });
-import newAnimation from '/public/lottie/contact.json';
+// const AnimationLottie = dynamic(() => import('../../helper/animation-lottie'), { ssr: false });
+// import newAnimation from '/public/lottie/contact.json';
 
 function Contact() {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
@@ -120,11 +120,11 @@ function Contact() {
           </form>
         </div>
 
-        <div className="order-1 md:order-1 relative rounded-lg">
+        {/* <div className="order-1 md:order-1 relative rounded-lg">
           <div className="max-w-full md:max-w-[442px] mx-auto">
             <AnimationLottie animationPath={newAnimation} />
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

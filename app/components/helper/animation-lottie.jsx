@@ -7,8 +7,10 @@ const AnimationLottie = ({ animationPath, width }) => {
     const [animationData, setAnimationData] = useState(null);
 
     useEffect(() => {
-        setAnimationData(animationPath);
-    }, [animationPath]);
+        if (typeof window !== 'undefined') {
+          setAnimationData(animationPath);
+        }
+      }, [animationPath]);
 
     const defaultOptions = {
         loop: true,
