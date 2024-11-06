@@ -24,12 +24,12 @@ function Navbar() {
       const width = window.innerWidth;
       if (width >= 1280) {
         setImageSrc("/chasepoulton-com.png");
-      } else if (width >= 900) {
+      } else if (width >= 850) {
         setImageSrc("/chasepoulton.png");
       } else {
         setImageSrc("/cp.png");
       }
-    }, 100);
+    }, []);
     
     handleResize();
     window.addEventListener("resize", handleResize);
@@ -38,7 +38,7 @@ function Navbar() {
   }, []);
 
   const navItems = [
-    { href: "/", label: "home" },
+    { href: "/#home", label: "home" },
     { href: "/#about", label: "about" },
     { href: "/#skills", label: "skills" },
     { href: "/#experience", label: "projects" },
@@ -59,15 +59,13 @@ function Navbar() {
     <nav className="fixed top-0 left-0 w-full bg-[#0d1224]/30 backdrop-blur-md z-50 shadow-lg">
     <div className="flex flex-col items-center justify-center lg:flex-row lg:justify-between px-6 lg:px-12 py-5">
       <div className="flex-shrink-0 cursor-pointer" onClick={toggleMenu}>
-        <Image
-          src={imageSrc}
-          alt="logo"
-          layout="responsive"
-          width={56}
-          height={56}
-          // maxHeight={56}
-          className="responsive-logo"
-        />
+      <Image
+        src={imageSrc}
+        alt="logo"
+        width={imageSrc === "/chasepoulton-com.png" ? 400 : imageSrc === "/chasepoulton.png" ? 325 : 100}
+        height={imageSrc === "/chasepoulton-com.png" ? 100 : imageSrc === "/chasepoulton.png" ? 100 : 100}
+        className="responsive-logo"
+      />
       </div>
 
           <ul

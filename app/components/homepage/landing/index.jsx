@@ -1,3 +1,5 @@
+"use client";
+
 import { personalData } from '@/utils/data/personal-data';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -15,7 +17,7 @@ import Type from '../Type';
 
 function Landing() {
   return (
-    <section className="relative flex flex-col items-center justify-between py-24">
+    <section id="home" className="relative flex flex-col items-center justify-between py-24">
       <Image 
         src="/hero.svg"
         alt="Hero"

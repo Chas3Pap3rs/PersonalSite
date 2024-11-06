@@ -1,6 +1,8 @@
-import React from "react";
-function Pre(props) {
-  return <div id={props.load ? "preloader" : "preloader-none"}></div>;
-}
+// "use client";
 
-export default Pre;
+// import React from "react";
+// function Pre(props) {
+//   return <div id={props.load ? "preloader" : "preloader-none"}></div>;
+// }
+
+// export default Pre;

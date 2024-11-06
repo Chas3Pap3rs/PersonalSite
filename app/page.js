@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Landing from "./components/homepage/landing";
 import About from "./components/homepage/about";
 import Skills from "./components/homepage/skills";
