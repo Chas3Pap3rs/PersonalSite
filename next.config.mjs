@@ -18,8 +18,8 @@ const nextConfig = {
   images: {
     unoptimized: true,     // Disables Next.js image optimization
   },
-  assetPrefix: assetPrefix, // Set the asset prefix for GitHub Pages
-  basePath: basePath,       // Set the base path for GitHub Pages
+  assetPrefix: isGithubActions ? assetPrefix : undefined, // Set the asset prefix for GitHub Pages
+  basePath: isGithubActions ? basePath : undefined,       // Set the base path for GitHub Pages
 };
 
 export default nextConfig;
