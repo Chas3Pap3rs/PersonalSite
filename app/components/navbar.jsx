@@ -4,9 +4,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 
-// Base path from environment, defaults to an empty string for local dev
-const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
-
 // Utility function to debounce resize handler
 const debounce = (fn, delay) => {
   let timer;
@@ -18,7 +15,7 @@ const debounce = (fn, delay) => {
 
 function Navbar() {
   // Correct the initial image source path
-  const [imageSrc, setImageSrc] = useState(`${basePath}/cp.png`);
+  const [imageSrc, setImageSrc] = useState(`/cp.png`);
   const [isMenuOpen, setIsMenuOpen] = useState(false); // State to control menu visibility
 
   useEffect(() => {
@@ -27,11 +24,11 @@ function Navbar() {
     const handleResize = debounce(() => {
       const width = window.innerWidth;
       if (width >= 1280) {
-        setImageSrc(`${basePath}/chasepoulton-com.png`);
+        setImageSrc(`/chasepoulton-com.png`);
       } else if (width >= 850) {
-        setImageSrc(`${basePath}/chasepoulton.png`);
+        setImageSrc(`$/chasepoulton.png`);
       } else {
-        setImageSrc(`${basePath}/cp.png`);
+        setImageSrc(`$/cp.png`);
       }
     }, 100);
     
@@ -42,11 +39,11 @@ function Navbar() {
   }, []);
 
   const navItems = [
-    { href: `${basePath}/#home`, label: "home" },
-    { href: `${basePath}/#about`, label: "about" },
-    { href: `${basePath}/#skills`, label: "skills" },
-    { href: `${basePath}/#experience`, label: "projects" },
-    { href: `${basePath}/#contact`, label: "contact" }
+    { href: `/#home`, label: "home" },
+    { href: `/#about`, label: "about" },
+    { href: `/#skills`, label: "skills" },
+    { href: `/#experience`, label: "projects" },
+    { href: `/#contact`, label: "contact" }
   ];
 
   // Toggle the menu when the logo is clicked
