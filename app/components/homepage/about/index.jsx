@@ -8,7 +8,9 @@ import { FaXTwitter } from 'react-icons/fa6';
 import { SiLeetcode, SiLeetCode } from "react-icons/si";
 
 // Define basePath for environment handling
-const basePath = process.env.NODE_ENV === "production" ? "/PersonalSite" : "";
+const isProduction = process.env.NODE_ENV === "production";
+const basePath = isProduction ? process.env.NEXT_PUBLIC_BASE_PATH || '' : '';
+
 
 function About() {
   return (

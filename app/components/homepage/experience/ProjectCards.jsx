@@ -5,7 +5,8 @@ import { projects } from '@/utils/data/experience'; // Import the projects data
 import { BsGithub } from 'react-icons/bs';
 import { CgWebsite } from 'react-icons/cg';
 
-const basePath = process.env.NODE_ENV === "production" ? "/PersonalSite" : "";
+const isProduction = process.env.NODE_ENV === "production";
+const basePath = isProduction ? process.env.NEXT_PUBLIC_BASE_PATH || '' : '';
 
 // Reusable ProjectCard component
 function ProjectCard({ title, image, description, techUsed, ghLink, demoLink, isCarousel = false }) {

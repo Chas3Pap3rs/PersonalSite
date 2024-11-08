@@ -13,7 +13,9 @@ import { RiContactsFill } from "react-icons/ri";
 // const AnimationLottie = dynamic(() => import('../../helper/animation-lottie'), { ssr: false });
 // import newAnimation from '/public/lottie/robot.json';  // New Lottie file
 
-const basePath = process.env.NODE_ENV === "production" ? "/PersonalSite" : "";
+const isProduction = process.env.NODE_ENV === "production";
+const basePath = isProduction ? process.env.NEXT_PUBLIC_BASE_PATH || '' : '';
+
 
 // Typewriter component
 import Type from '../Type';

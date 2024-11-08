@@ -6,6 +6,9 @@ import { SiMacos, SiVisualstudiocode, SiPostman, SiSlack, SiVercel } from 'react
 
 import EmblaCarousel from "./EmblaCarousel";
 
+const isProduction = process.env.NODE_ENV === "production";
+const basePath = isProduction ? process.env.NEXT_PUBLIC_BASE_PATH || '' : '';
+
 function Skills() {
     const techIcons = [DiJavascript1, DiNodejs, DiReact, DiMongodb, DiPython, DiGit, DiJava];
     const toolIcons = [SiMacos, SiVisualstudiocode, SiPostman, SiSlack, SiVercel];
@@ -13,7 +16,7 @@ function Skills() {
     return (
         <div id="skills" className="relative border-t my-12 border-[#25213b]">
             <Image
-                src="/section.svg"
+                src={`${basePath}/section.svg`}
                 alt="Hero"
                 width={1572}
                 height={795}

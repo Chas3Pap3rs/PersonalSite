@@ -5,7 +5,8 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 
 // Define basePath directly
-const basePath = process.env.NODE_ENV === "production" ? "/PersonalSite" : "";
+const isProduction = process.env.NODE_ENV === "production";
+const basePath = isProduction ? process.env.NEXT_PUBLIC_BASE_PATH || '' : '';
 
 // Utility function to debounce resize handler
 const debounce = (fn, delay) => {
@@ -41,11 +42,11 @@ function Navbar() {
   }, []);
 
   const navItems = [
-    { href: `/#home`, label: "home" },
-    { href: `/#about`, label: "about" },
-    { href: `/#skills`, label: "skills" },
-    { href: `/#experience`, label: "projects" },
-    { href: `/#contact`, label: "contact" }
+    { href: `${basePath}/#home`, label: "home" },
+    { href: `${basePath}/#about`, label: "about" },
+    { href: `${basePath}/#skills`, label: "skills" },
+    { href: `${basePath}/#experience`, label: "projects" },
+    { href: `${basePath}/#contact`, label: "contact" }
   ];
 
   const toggleMenu = () => {
