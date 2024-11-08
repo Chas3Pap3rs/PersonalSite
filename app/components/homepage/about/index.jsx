@@ -90,7 +90,7 @@ function About() {
 
         <div className="flex justify-center order-1 lg:order-1">
           <Image 
-            src={`${basePath}${personalData.profile}`}
+            src={`${personalData.profile}`}
             alt="Profile"
             width={470}
             height={630}

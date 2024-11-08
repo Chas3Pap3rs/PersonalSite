@@ -25,7 +25,7 @@ function Landing() {
   return (
     <section id="home" className="relative flex flex-col items-center justify-between py-24">
       <Image 
-        src={`${basePath}/hero.svg`}
+        src={`/hero.svg`}
         alt="Hero"
         width={1572}
         height={795}
