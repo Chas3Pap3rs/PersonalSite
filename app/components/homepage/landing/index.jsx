@@ -13,6 +13,8 @@ import { RiContactsFill } from "react-icons/ri";
 // const AnimationLottie = dynamic(() => import('../../helper/animation-lottie'), { ssr: false });
 // import newAnimation from '/public/lottie/robot.json';  // New Lottie file
 
+const basePath = process.env.NODE_ENV === "production" ? "/PersonalSite" : "";
+
 // Typewriter component
 import Type from '../Type';
 
@@ -21,7 +23,7 @@ function Landing() {
   return (
     <section id="home" className="relative flex flex-col items-center justify-between py-24">
       <Image 
-        src="/hero.svg"
+        src={`${basePath}/hero.svg`}
         alt="Hero"
         width={1572}
         height={795}
