@@ -59,7 +59,7 @@ function Landing() {
           </div>
         </div>
 
-        <div className="order-1 lg:order-2 relative rounded-lg">
+        <div className="order-1 lg:order-2 relative rounded-lg mt-20"> {/* Margin top set to 20 for now until AnuimationLottie is fixed for deployment */}
           {/*<div className="max-w-full lg:max-w-none md:max-w-[442px] mx-auto">
             <AnimationLottie animationPath={newAnimation} /> 
           </div> */}
