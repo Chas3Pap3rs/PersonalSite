@@ -31,7 +31,7 @@ function Navbar() {
       } else if (width >= 850) {
         setImageSrc(`${basePath}/chasepoulton.png`);
       } else {
-        setImageSrc(`${basePath}/cp.png`);
+        imageSrc();
       }
     }, 100);
 
