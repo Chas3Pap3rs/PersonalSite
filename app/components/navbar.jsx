@@ -42,11 +42,11 @@ function Navbar() {
   }, []);
 
   const navItems = [
-    { href: `${basePath}/#home`, label: "home" },
-    { href: `${basePath}/#about`, label: "about" },
-    { href: `${basePath}/#skills`, label: "skills" },
-    { href: `${basePath}/#experience`, label: "projects" },
-    { href: `${basePath}/#contact`, label: "contact" }
+    { href: `#home`, label: "home" },
+    { href: `#about`, label: "about" },
+    { href: `#skills`, label: "skills" },
+    { href: `#experience`, label: "projects" },
+    { href: `#contact`, label: "contact" }
   ];
 
   const toggleMenu = () => {
