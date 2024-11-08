@@ -18,7 +18,7 @@ function ProjectCard({ title, image, description, techUsed, ghLink, demoLink, is
       {/* Image, tech used, and description */}
       <div className="flex-grow mb-1 md:mb-10">
         <Image 
-          src={`${basePath}${image}`} // Adjust image path with basePath
+          src={`${image}`} // Adjust image path with basePath
           alt="example"
           width={600}
           height={400}
@@ -66,7 +66,7 @@ export default function ProjectCards() {
               <ProjectCard
                 key={index}
                 title={project.title}
-                image={`${basePath}${project.image}`} // Use basePath with image path here
+                image={`${project.image}`} // Use basePath with image path here
                 description={project.description}
                 techUsed={project.techUsed}
                 ghLink={project.ghLink}
@@ -84,7 +84,7 @@ export default function ProjectCards() {
           <ProjectCard 
             key={index}
             title={project.title}
-            image={`${basePath}${project.image}`} // Use basePath with image path here as well
+            image={`${project.image}`} // Use basePath with image path here as well
             description={project.description}
             techUsed={project.techUsed}
             ghLink={project.ghLink}
