@@ -5,6 +5,8 @@ import { projects } from '@/utils/data/experience'; // Import the projects data
 import { BsGithub } from 'react-icons/bs';
 import { CgWebsite } from 'react-icons/cg';
 
+const basePath = process.env.NODE_ENV === "production" ? "/PersonalSite" : "";
+
 // Reusable ProjectCard component
 function ProjectCard({ title, image, description, techUsed, ghLink, demoLink, isCarousel = false }) {
   return (
@@ -15,7 +17,7 @@ function ProjectCard({ title, image, description, techUsed, ghLink, demoLink, is
       {/* Image, tech used, and description */}
       <div className="flex-grow mb-1 md:mb-10">
         <Image 
-          src={image}
+          src={`${basePath}${image}`} // Adjust image path with basePath
           alt="example"
           width={600}
           height={400}
@@ -63,7 +65,7 @@ export default function ProjectCards() {
               <ProjectCard
                 key={index}
                 title={project.title}
-                image={project.image}
+                image={`${basePath}${project.image}`} // Use basePath with image path here
                 description={project.description}
                 techUsed={project.techUsed}
                 ghLink={project.ghLink}
@@ -81,7 +83,7 @@ export default function ProjectCards() {
           <ProjectCard 
             key={index}
             title={project.title}
-            image={project.image}
+            image={`${basePath}${project.image}`} // Use basePath with image path here as well
             description={project.description}
             techUsed={project.techUsed}
             ghLink={project.ghLink}

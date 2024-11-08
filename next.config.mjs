@@ -2,24 +2,24 @@
 
 // Check if we are running on GitHub Actions
 const isGithubActions = process.env.GITHUB_ACTIONS || false;
-let assetPrefix = '';
-let basePath = '';
 
-// Configure the asset prefix and base path for GitHub Pages
-if (isGithubActions) {
-  const repo = process.env.GITHUB_REPOSITORY.replace(/.*?\//, ''); // Get the repo name
-  assetPrefix = `/${repo}/`;
-  basePath = `/${repo}`;
-}
+// Set base path and asset prefix based on whether we are on GitHub Actions
+const repoName = isGithubActions ? process.env.GITHUB_REPOSITORY.split('/')[1] : '';
+const basePath = isGithubActions ? `/${repoName}` : '';
+const assetPrefix = isGithubActions ? `/${repoName}/` : '';
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',        // Enables static HTML export for GitHub Pages
+  output: 'export', // Enables static HTML export for GitHub Pages
   images: {
-    unoptimized: true,     // Disables Next.js image optimization
+    unoptimized: true, // Disables Next.js image optimization for static export
   },
-  assetPrefix: isGithubActions ? assetPrefix : undefined, // Set the asset prefix for GitHub Pages
-  basePath: isGithubActions ? basePath : undefined,       // Set the base path for GitHub Pages
+  assetPrefix: assetPrefix || undefined, // Only use assetPrefix when in production on GitHub Pages
+  basePath: basePath || undefined,       // Only use basePath when in production on GitHub Pages
+  publicRuntimeConfig: {
+    basePath: basePath, // Expose basePath to the entire app
+  },
 };
 
 export default nextConfig;
+

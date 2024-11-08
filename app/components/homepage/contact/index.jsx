@@ -9,6 +9,8 @@ import dynamic from 'next/dynamic';
 // const AnimationLottie = dynamic(() => import('../../helper/animation-lottie'), { ssr: false });
 // import newAnimation from '/public/lottie/contact.json';
 
+const basePath = process.env.NODE_ENV === "production" ? "/PersonalSite" : "";
+
 function Contact() {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
   const [submitted, setSubmitted] = useState(false);
@@ -47,7 +49,7 @@ function Contact() {
   return (
     <div id="contact" className="relative border-t my-12 border-[#25213b]">
       <Image 
-        src="/section.svg"
+        src={`${basePath}/section.svg`}
         alt="Hero"
         width={1572}
         height={795}

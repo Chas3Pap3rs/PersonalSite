@@ -1,11 +1,13 @@
 import Image from "next/image";
 import ProjectCards from "./ProjectCards";
 
+const basePath = process.env.NODE_ENV === "production" ? "/PersonalSite" : "";
+
 function Experience() {
   return (
     <div id="experience" className="relative border-t my-12 border-[#25213b]">
       <Image 
-        src="/section.svg"
+        src={`${basePath}/section.svg`}
         alt="Hero"
         width={1572}
         height={795}
