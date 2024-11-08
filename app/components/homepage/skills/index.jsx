@@ -7,7 +7,7 @@ import { SiMacos, SiVisualstudiocode, SiPostman, SiSlack, SiVercel } from 'react
 import EmblaCarousel from "./EmblaCarousel";
 
 const isProduction = process.env.NODE_ENV === "production";
-const basePath = isProduction ? process.env.NEXT_PUBLIC_BASE_PATH || '' : '';
+const basePath = isProduction ? process.env.NEXT_PUBLIC_BASE_PATH || '/PersonalSite' : '';
 
 function Skills() {
     const techIcons = [DiJavascript1, DiNodejs, DiReact, DiMongodb, DiPython, DiGit, DiJava];

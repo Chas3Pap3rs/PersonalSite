@@ -14,7 +14,7 @@ import { RiContactsFill } from "react-icons/ri";
 // import newAnimation from '/public/lottie/robot.json';  // New Lottie file
 
 const isProduction = process.env.NODE_ENV === "production";
-const basePath = isProduction ? process.env.NEXT_PUBLIC_BASE_PATH || '' : '';
+const basePath = isProduction ? process.env.NEXT_PUBLIC_BASE_PATH || '/PersonalSite' : '';
 
 
 // Typewriter component

@@ -1,7 +1,8 @@
 import Image from "next/image";
 import ProjectCards from "./ProjectCards";
 
-const basePath = process.env.NODE_ENV === "production" ? "/PersonalSite" : "";
+const isProduction = process.env.NODE_ENV === "production";
+const basePath = isProduction ? process.env.NEXT_PUBLIC_BASE_PATH || '/PersonalSite' : '';
 
 function Experience() {
   return (

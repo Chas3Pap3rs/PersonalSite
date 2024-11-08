@@ -9,7 +9,7 @@ import { SiLeetcode, SiLeetCode } from "react-icons/si";
 
 // Define basePath for environment handling
 const isProduction = process.env.NODE_ENV === "production";
-const basePath = isProduction ? process.env.NEXT_PUBLIC_BASE_PATH || '' : '';
+const basePath = isProduction ? process.env.NEXT_PUBLIC_BASE_PATH || '/PersonalSite' : '';
 
 
 function About() {
