@@ -17,6 +17,7 @@ const debounce = (fn, delay) => {
 };
 
 function Navbar() {
+  // Correct the initial image source path
   const [imageSrc, setImageSrc] = useState(`${basePath}/cp.png`);
   const [isMenuOpen, setIsMenuOpen] = useState(false); // State to control menu visibility
 
@@ -65,7 +66,7 @@ function Navbar() {
           <Image
             src={imageSrc}
             alt="logo"
-            width={imageSrc === `${basePath}/chasepoulton-com.png` ? 400 : imageSrc === `${basePath}/chasepoulton.png` ? 325 : 100}
+            width={imageSrc.includes("chasepoulton-com") ? 400 : imageSrc.includes("chasepoulton") ? 325 : 100}
             height={100}
             className="responsive-logo"
           />
