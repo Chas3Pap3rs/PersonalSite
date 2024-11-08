@@ -66,7 +66,7 @@ export default function ProjectCards() {
               <ProjectCard
                 key={index}
                 title={project.title}
-                image={`${project.image}`} // Use basePath with image path here
+                image={`${basePath}${project.image}`} // Use basePath with image path here
                 description={project.description}
                 techUsed={project.techUsed}
                 ghLink={project.ghLink}
@@ -84,7 +84,7 @@ export default function ProjectCards() {
           <ProjectCard 
             key={index}
             title={project.title}
-            image={`${project.image}`} // Use basePath with image path here as well
+            image={`${basePath}${project.image}`} // Use basePath with image path here as well
             description={project.description}
             techUsed={project.techUsed}
             ghLink={project.ghLink}
