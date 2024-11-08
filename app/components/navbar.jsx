@@ -42,11 +42,11 @@ function Navbar() {
   }, []);
 
   const navItems = [
-    { href: "#home", label: "home" },
-    { href: "#about", label: "about" },
-    { href: "#skills", label: "skills" },
-    { href: "#experience", label: "projects" },
-    { href: "#contact", label: "contact" }
+    { href: `${basePath}#home`, label: "home" },
+    { href: `${basePath}#about`, label: "about" },
+    { href: `${basePath}#skills`, label: "skills" },
+    { href: `${basePath}#experience`, label: "projects" },
+    { href: `${basePath}#contact`, label: "contact" }
   ];
 
   const toggleMenu = () => {
@@ -79,7 +79,15 @@ function Navbar() {
               <Link
                 href={item.href}
                 className="block px-4 py-2 no-underline outline-none hover:no-underline uppercase text-center"
-                onClick={handleNavClick}
+                onClick={(e) => {
+                  e.preventDefault(); // Prevent default page reload
+                  const targetId = item.href.replace(basePath, "").substring(1); // Get section ID (e.g., "home")
+                  const targetElement = document.getElementById(targetId); // Find element by ID
+                  if (targetElement) {
+                    targetElement.scrollIntoView({ behavior: "smooth" }); // Smooth scroll to element
+                  }
+                  setIsMenuOpen(false); // Close menu on mobile
+                }}
               >
                 <div className="text-sm text-white transition-colors duration-300 hover:text-pink-600">
                   {item.label}
