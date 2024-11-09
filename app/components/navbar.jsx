@@ -18,7 +18,7 @@ const debounce = (fn, delay) => {
 };
 
 function Navbar() {
-  const [imageSrc, setImageSrc] = useState(`${basePath}/cp.png`);
+  const [imageSrc, setImageSrc] = useState(`${basePath}/CP.png`);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
@@ -31,7 +31,7 @@ function Navbar() {
       } else if (width >= 850) {
         setImageSrc(`${basePath}/chasepoulton.png`);
       } else {
-        setImageSrc(`${basePath}/cp.png`);
+        setImageSrc(`${basePath}/CP.png`);
       }
     }, 100);
 
