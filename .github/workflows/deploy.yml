@@ -31,4 +31,4 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: out/  # Ensure this is the correct output directory with trailing slash
-          server-dir: /public_html  # The directory on Hostinger where files should be uploaded
+          server-dir: /public_html/  # The directory on Hostinger where files should be uploaded
