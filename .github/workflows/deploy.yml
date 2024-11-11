@@ -22,10 +22,7 @@ jobs:
         run: npm install
 
       - name: Build and Export Next.js Project
-        run: |
-          npm run build
-          npm run export  # This will create the static files in the `out` folder
-
+        run: npm run build
 
       - name: Deploy to Hostinger via FTP
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
