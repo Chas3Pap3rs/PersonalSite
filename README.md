@@ -1,27 +1,15 @@
-CHASEPOULTON.COM
+<h2 align="center">
+  Professional Website - Personal Portfolio<br/>
+  <a href="https://chasepoulton.com/" target="_blank">chasepoulton.com</a>
+</h2>
+
+<div align="center">
+  <img alt="Demo" src="./public/demo.png" />
+</div>
 
 
+This is my personal professional website. This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
 
