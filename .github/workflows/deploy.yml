@@ -27,7 +27,7 @@ jobs:
       - name: Deploy to Hostinger via FTP
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
         with:
-          server: ftp://149.100.151.39/  # Hostinger FTP server
+          server: 149.100.151.39 # Hostinger FTP server
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: out/  # Ensure this is the correct output directory with trailing slash
