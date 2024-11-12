@@ -6,7 +6,8 @@ import { BsGithub } from 'react-icons/bs';
 import { CgWebsite } from 'react-icons/cg';
 
 const isProduction = process.env.NODE_ENV === "production";
-const basePath = isProduction ? process.env.NEXT_PUBLIC_BASE_PATH || '/PersonalSite' : '';
+const isGitHubPages = typeof window !== "undefined" && window.location.hostname === "chas3pap3rs.github.io";
+const basePath = isGitHubPages ? "/PersonalSite" : "";
 
 // Reusable ProjectCard component
 function ProjectCard({ title, image, description, techUsed, ghLink, demoLink, isCarousel = false }) {

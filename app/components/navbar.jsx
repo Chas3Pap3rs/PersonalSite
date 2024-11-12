@@ -12,7 +12,7 @@ const basePath = isGitHubPages ? "/PersonalSite" : "";
 const getImagePath = (path) => `${basePath}${path}`;
 
 function Navbar() {
-  const [imageSrc, setImageSrc] = useState(getImagePath("/cp.png"));
+  const [imageSrc, setImageSrc] = useState(getImagePath("/CP.png"));
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
@@ -25,7 +25,7 @@ function Navbar() {
       } else if (width >= 850) {
         setImageSrc(getImagePath("/chasepoulton.png"));
       } else {
-        setImageSrc(getImagePath("/cp.png"));
+        setImageSrc(getImagePath("/CP.png"));
       }
     };
 
