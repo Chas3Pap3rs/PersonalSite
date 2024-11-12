@@ -4,9 +4,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 
-// Define basePath directly
+// Detect if we're on GitHub Pages or a custom domain
 const isProduction = process.env.NODE_ENV === "production";
-const basePath = isProduction ? process.env.NEXT_PUBLIC_BASE_PATH || '/PersonalSite' : '';
+const isGitHubPages = typeof window !== "undefined" && window.location.hostname === "chas3pap3rs.github.io";
+const basePath = isGitHubPages ? "/PersonalSite" : "";
 
 const getImagePath = (path) => `${basePath}${path}`;
 

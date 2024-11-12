@@ -14,7 +14,8 @@ import { RiContactsFill } from "react-icons/ri";
 // import newAnimation from '/public/lottie/robot.json';  // New Lottie file
 
 const isProduction = process.env.NODE_ENV === "production";
-const basePath = isProduction ? process.env.NEXT_PUBLIC_BASE_PATH || '/PersonalSite' : '';
+const isGitHubPages = typeof window !== "undefined" && window.location.hostname === "chas3pap3rs.github.io";
+const basePath = isGitHubPages ? "/PersonalSite" : "";
 
 
 // Typewriter component

@@ -1,6 +1,6 @@
-// import 'bootstrap/dist/css/bootstrap.min.css'; // Import bootstrap globally
+
 import { Cabin } from "next/font/google";
-import "./css/globals.scss";  // Your global styles
+import "./css/globals.scss";
 
 const cabin = Cabin({ subsets: ["latin"] });
 
