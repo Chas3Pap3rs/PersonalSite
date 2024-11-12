@@ -8,9 +8,6 @@ const nextConfig = {
   },
   assetPrefix: isGithubActions ? `/${repoName}/` : '',
   basePath: isGithubActions ? `/${repoName}` : '',
-  publicRuntimeConfig: {
-    basePath: isGithubActions ? `/${repoName}` : '',
-  },
 };
 
 export default nextConfig;
