@@ -13,7 +13,13 @@ const isGitHubPages = typeof window !== "undefined" && window.location.hostname 
 const basePath = isGitHubPages ? "/PersonalSite" : "";
 
 // Helper function to handle image paths
-const getImagePath = (path) => `${basePath}${path}`;
+const getImagePath = (path) => {
+  // Only add basePath if we're on GitHub Pages
+  if (isGitHubPages) {
+    return `/PersonalSite${path}`;  // For GitHub Pages, use /PersonalSite prefix
+  }
+  return path;  // For Hostinger and production, return the path directly without the basePath
+};
 
 
 function About() {
