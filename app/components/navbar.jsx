@@ -9,6 +9,7 @@ const isProduction = process.env.NODE_ENV === "production";
 const isGitHubPages = typeof window !== "undefined" && window.location.hostname === "chas3pap3rs.github.io";
 const basePath = isGitHubPages ? "/PersonalSite" : "";
 
+// Helper function to handle image paths
 const getImagePath = (path) => `${basePath}${path}`;
 
 function Navbar() {

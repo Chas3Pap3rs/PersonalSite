@@ -13,6 +13,9 @@ const isProduction = process.env.NODE_ENV === "production";
 const isGitHubPages = typeof window !== "undefined" && window.location.hostname === "chas3pap3rs.github.io";
 const basePath = isGitHubPages ? "/PersonalSite" : "";
 
+// Helper function to handle image paths
+const getImagePath = (path) => `${basePath}${path}`;
+
 function Contact() {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
   const [submitted, setSubmitted] = useState(false);
@@ -51,7 +54,7 @@ function Contact() {
   return (
     <div id="contact" className="relative border-t my-12 border-[#25213b]">
       <Image 
-        src={`${basePath}/section.svg`}
+        src={getImagePath("/section.svg")}
         alt="Hero"
         width={1572}
         height={795}
