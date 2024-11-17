@@ -6,7 +6,11 @@ import { BsGithub } from 'react-icons/bs';
 import { CgWebsite } from 'react-icons/cg';
 
 const isProduction = process.env.NODE_ENV === "production";
-const basePath = isProduction ? process.env.NEXT_PUBLIC_BASE_PATH || '/PersonalSite' : '';
+const isGitHubPages = typeof window !== "undefined" && window.location.hostname === "chas3pap3rs.github.io";
+const basePath = isGitHubPages ? "/PersonalSite" : "";
+
+// Helper function to handle image paths
+const getImagePath = (path) => `${basePath}${path}`;
 
 // Reusable ProjectCard component
 function ProjectCard({ title, image, description, techUsed, ghLink, demoLink, isCarousel = false }) {
@@ -18,7 +22,7 @@ function ProjectCard({ title, image, description, techUsed, ghLink, demoLink, is
       {/* Image, tech used, and description */}
       <div className="flex-grow mb-1 md:mb-10">
         <Image 
-          src={`${image}`} // Adjust image path with basePath
+          src={getImagePath(image)} // Adjust image path with basePath
           alt="example"
           width={600}
           height={400}
@@ -66,7 +70,7 @@ export default function ProjectCards() {
               <ProjectCard
                 key={index}
                 title={project.title}
-                image={`${basePath}${project.image}`} // Use basePath with image path here
+                image={getImagePath(project.image)}
                 description={project.description}
                 techUsed={project.techUsed}
                 ghLink={project.ghLink}
@@ -84,7 +88,7 @@ export default function ProjectCards() {
           <ProjectCard 
             key={index}
             title={project.title}
-            image={`${basePath}${project.image}`} // Use basePath with image path here as well
+            image={getImagePath(project.image)}
             description={project.description}
             techUsed={project.techUsed}
             ghLink={project.ghLink}

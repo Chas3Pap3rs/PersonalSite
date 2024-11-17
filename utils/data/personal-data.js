@@ -13,5 +13,5 @@ export const personalData = {
     leetcode: 'https://leetcode.com/u/clpoulton/',
     twitter: '',
     devUsername: "",
-    resume: ""
+    resume: "resume-chasepoulton.pdf"
 }

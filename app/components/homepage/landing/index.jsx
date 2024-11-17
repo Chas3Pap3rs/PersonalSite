@@ -17,6 +17,7 @@ const isProduction = process.env.NODE_ENV === "production";
 const isGitHubPages = typeof window !== "undefined" && window.location.hostname === "chas3pap3rs.github.io";
 const basePath = isGitHubPages ? "/PersonalSite" : "";
 
+const getImagePath = (path) => `${basePath}${path}`;
 
 // Typewriter component
 import Type from '../Type';
@@ -26,7 +27,7 @@ function Landing() {
   return (
     <section id="home" className="relative flex flex-col items-center justify-between py-24">
       <Image 
-        src={`${basePath}/hero.svg`}
+         src={getImagePath("/hero.svg")}
         alt="Hero"
         width={1572}
         height={795}

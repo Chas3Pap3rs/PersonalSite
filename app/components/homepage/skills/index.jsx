@@ -7,7 +7,8 @@ import { SiMacos, SiVisualstudiocode, SiGithub, SiPostman, SiSlack, SiAffinityde
 import EmblaCarousel from "./EmblaCarousel";
 
 const isProduction = process.env.NODE_ENV === "production";
-const basePath = isProduction ? process.env.NEXT_PUBLIC_BASE_PATH || '/PersonalSite' : '';
+const isGitHubPages = typeof window !== "undefined" && window.location.hostname === "chas3pap3rs.github.io";
+const basePath = isGitHubPages ? "/PersonalSite" : "";
 
 function Skills() {
     const techIcons = [DiJsBadge, DiNodejs, DiReact, DiHtml5, DiBootstrap, DiCss3, DiPython, DiDjango, DiGit, DiJava, DiPhp, SiVite, SiCsharp ];

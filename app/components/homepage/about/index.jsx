@@ -9,14 +9,23 @@ import { SiLeetcode, SiLeetCode } from "react-icons/si";
 
 // Define basePath for environment handling
 const isProduction = process.env.NODE_ENV === "production";
-const basePath = isProduction ? process.env.NEXT_PUBLIC_BASE_PATH || '/PersonalSite' : '';
+const isGitHubPages = typeof window !== "undefined" && window.location.hostname === "chas3pap3rs.github.io";
+const basePath = isGitHubPages ? "/PersonalSite" : "";
 
+// Helper function to handle image paths
+const getImagePath = (path) => {
+  // Only add basePath if we're on GitHub Pages
+  if (isGitHubPages) {
+    return `/PersonalSite${path}`;  // For GitHub Pages, use /PersonalSite prefix
+  }
+  return path;  // For Hostinger and production, return the path directly without the basePath
+};
 
 function About() {
   return (
     <div id="about" className="relative border-t my-12 border-[#25213b]">
       <Image 
-        src={`${basePath}/section.svg`}
+        src={getImagePath("/section.svg")}
         alt="Hero"
         width={1572}
         height={795}
@@ -90,7 +99,7 @@ function About() {
 
         <div className="flex justify-center order-1 lg:order-1">
           <Image 
-            src={`${basePath}${personalData.profile}`}
+            src={getImagePath(personalData.profile)}
             alt="Profile"
             width={470}
             height={630}
