@@ -1,8 +1,8 @@
 export const projects = [
   {
-    title: "Personal Information Based Website (chasepoulton.com)",
+    title: "Artist Website (chas3pap3rs.com)",
     image: "/under-construction.jpg",
-    description: "A personal/business website showcasing music releases under the artist name: Chas3 Pap3rs. Built using HTML, CSS, Bootstrap, and GitHub, with hosting on Hostinger. Includes a working contact form built with Formspree.",
+    description: "A personal/business website showcasing music releases for artist Chas3 Pap3rs. Built using HTML, CSS, Bootstrap, and GitHub, with hosting on Hostinger. Includes a working contact form built with Formspree.",
     techUsed: "HTML, CSS, Bootstrap, Formspree, GitHub",
     ghLink: "https://github.com/Chas3Pap3rs/ArtistWebsite", 
     demoLink: "https://chasepoulton.com" 
@@ -49,7 +49,7 @@ export const projects = [
   },
   {
     title: "Excel TNSF Tracker Data Transfer App",
-    image: "/under-construction.jpg", // Image right after title
+    image: "/tnsf-datatransferapp.png", // Image right after title
     description: "A python application built for the TN Strong Families Grant Program. The app reads the data from the TNSF Tracking Tool workbook (Excel) and writes it to a new workbook in the format required by the TN Strong Families Grant Program.",
     techUsed: "Python, openpyxl, Flask",
     ghLink: "https://github.com/Chas3Pap3rs/ExcelWorkbookConverter_TNSF", 
@@ -57,7 +57,7 @@ export const projects = [
   },
   {
     title: "Roadtrip Fuel Calculator",
-    image: "/under-construction.jpg", // Image right after title
+    image: "/roadtrip-fuel-calc.png", // Image right after title
     description: "A simple application that takes your input on location, desired destination, your cars gas mileage and fuel tank size and takes gas prices from both locations averaged and gives you an estimation of fuel costs for your road trip and how many times you will need to stop for gas.",
     techUsed: "Javascript, HTML, CSS, Google: Maps & Geocoding API, Collect API",
     ghLink: "https://github.com/Chas3Pap3rs/RoadtripFuelCalculator", 

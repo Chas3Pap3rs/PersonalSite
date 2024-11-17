@@ -1,8 +1,8 @@
 import Image from "next/image";
 import React from "react";
 
-import { DiJsBadge, DiNodejs, DiReact, DiHtml5, DiBootstrap, DiCss3, DiPython, DiDjango, DiGit, DiJava, DiPhp, DiNetbeans } from 'react-icons/di';
-import { SiMacos, SiVisualstudiocode, SiGithub, SiPostman, SiSlack, SiAffinitydesigner, SiCanva, SiDotnet, SiInsomnia, SiPycharm, SiHostinger, SiOpenai, SiDocker, SiKubernetes, SiVite, SiCsharp  } from 'react-icons/si';
+import { DiJsBadge, DiNodejs, DiReact, DiHtml5, DiCss3, DiPython, DiDjango, DiGit, DiJava, DiPhp, DiNetbeans } from 'react-icons/di';
+import { SiMacos, SiVisualstudiocode, SiGithub, SiPostman, SiSlack, SiAffinitydesigner, SiCanva, SiDotnet, SiInsomnia, SiPycharm, SiHostinger, SiOpenai, SiDocker, SiKubernetes, SiVite, SiCsharp, SiBootstrap, SiFlask  } from 'react-icons/si';
 
 import EmblaCarousel from "./EmblaCarousel";
 
@@ -11,7 +11,7 @@ const isGitHubPages = typeof window !== "undefined" && window.location.hostname 
 const basePath = isGitHubPages ? "/PersonalSite" : "";
 
 function Skills() {
-    const techIcons = [DiJsBadge, DiNodejs, DiReact, DiHtml5, DiBootstrap, DiCss3, DiPython, DiDjango, DiGit, DiJava, DiPhp, SiVite, SiCsharp ];
+    const techIcons = [DiJsBadge, DiHtml5, DiCss3, DiReact, SiVite, DiNodejs, DiPython, DiDjango, SiFlask, DiGit, DiJava, SiCsharp, SiBootstrap, DiPhp ];
     const toolIcons = [SiMacos, SiVisualstudiocode, SiGithub, SiInsomnia, SiPostman, SiHostinger, SiAffinitydesigner, SiCanva, SiPycharm, SiSlack, SiDotnet, DiNetbeans, SiOpenai, SiDocker, SiKubernetes ];
 
     return (
