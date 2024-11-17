@@ -1,5 +1,5 @@
 export const personalData = {
-    name: "I'm a passionate",
+    name: "I'M A PASSIONATE...",
     profile: '/cedarpoint.jpg',
     designation: "Based in Knoxville, TN",
     description: "I’m passionate about Frontend Development and continuously refine my expertise in JavaScript and React to create intuitive, clean, and efficient code. Whether working on playful web applications or complex simulations, I’m driven by learning and innovation, always staying ahead of development trends.",

@@ -70,7 +70,7 @@ export default function ProjectCards() {
               <ProjectCard
                 key={index}
                 title={project.title}
-                image={getImagePath(project.image)} // Use getImagePath with project.image
+                image={getImagePath(project.image)}
                 description={project.description}
                 techUsed={project.techUsed}
                 ghLink={project.ghLink}
@@ -88,7 +88,7 @@ export default function ProjectCards() {
           <ProjectCard 
             key={index}
             title={project.title}
-            image={getImagePath(project.image)} // Use getImagePath here as well
+            image={getImagePath(project.image)}
             description={project.description}
             techUsed={project.techUsed}
             ghLink={project.ghLink}

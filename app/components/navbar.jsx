@@ -10,9 +10,11 @@ const isGitHubPages = typeof window !== "undefined" && window.location.hostname 
 const basePath = isGitHubPages ? "/PersonalSite" : "";
 
 // Helper function to handle image paths
+// Helper function to handle image paths
 const getImagePath = (path) => `${basePath}${path}`;
 
 function Navbar() {
+  const [imageSrc, setImageSrc] = useState(getImagePath("/CP.png"));
   const [imageSrc, setImageSrc] = useState(getImagePath("/CP.png"));
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -26,6 +28,7 @@ function Navbar() {
       } else if (width >= 850) {
         setImageSrc(getImagePath("/chasepoulton.png"));
       } else {
+        setImageSrc(getImagePath("/CP.png"));
         setImageSrc(getImagePath("/CP.png"));
       }
     };
