@@ -1,8 +1,8 @@
 import Image from "next/image";
 import React from "react";
 
-import { DiJavascript1, DiNodejs, DiReact, DiMongodb, DiPython, DiGit, DiJava } from 'react-icons/di';
-import { SiMacos, SiVisualstudiocode, SiPostman, SiSlack, SiVercel } from 'react-icons/si';
+import { DiJsBadge, DiNodejs, DiReact, DiHtml5, DiBootstrap, DiCss3, DiPython, DiDjango, DiGit, DiJava, DiPhp, DiNetbeans } from 'react-icons/di';
+import { SiMacos, SiVisualstudiocode, SiGithub, SiPostman, SiSlack, SiAffinitydesigner, SiCanva, SiDotnet, SiInsomnia, SiPycharm, SiHostinger, SiOpenai, SiDocker, SiKubernetes, SiVite, SiCsharp  } from 'react-icons/si';
 
 import EmblaCarousel from "./EmblaCarousel";
 
@@ -10,8 +10,8 @@ const isProduction = process.env.NODE_ENV === "production";
 const basePath = isProduction ? process.env.NEXT_PUBLIC_BASE_PATH || '/PersonalSite' : '';
 
 function Skills() {
-    const techIcons = [DiJavascript1, DiNodejs, DiReact, DiMongodb, DiPython, DiGit, DiJava];
-    const toolIcons = [SiMacos, SiVisualstudiocode, SiPostman, SiSlack, SiVercel];
+    const techIcons = [DiJsBadge, DiNodejs, DiReact, DiHtml5, DiBootstrap, DiCss3, DiPython, DiDjango, DiGit, DiJava, DiPhp, SiVite, SiCsharp ];
+    const toolIcons = [SiMacos, SiVisualstudiocode, SiGithub, SiInsomnia, SiPostman, SiHostinger, SiAffinitydesigner, SiCanva, SiPycharm, SiSlack, SiDotnet, DiNetbeans, SiOpenai, SiDocker, SiKubernetes ];
 
     return (
         <div id="skills" className="relative border-t my-12 border-[#25213b]">
@@ -94,63 +94,3 @@ function Skills() {
 }
 
 export default Skills;
-
-// import EmblaCarousel from './EmblaCarousel'; // Assuming it's in the same directory
-// import { DiJavascript1, DiNodejs, DiReact, DiMongodb, DiPython, DiGit, DiJava } from 'react-icons/di';
-// import { SiRedis, SiFirebase, SiNextdotjs, SiSolidity, SiPostgresql, SiVisualstudiocode, SiPostman, SiSlack, SiVercel, SiMacos } from 'react-icons/si';
-
-// const techIcons = [DiJavascript1, DiNodejs, DiReact, DiMongodb, SiNextdotjs, DiGit, SiFirebase, SiPostgresql, DiPython, DiJava];
-// const toolIcons = [SiMacos, SiVisualstudiocode, SiPostman, SiSlack, SiVercel];
-
-// function Skills() {
-//   return (
-//     <div id="experience" className="relative border-t my-12 border-[#25213b]">
-//       {/* Existing Hero SVG & Section Setup */}
-//       {/* Title and other parts */}
-
-//       {/* Professional Skillsets */}
-//       <div className="order-1 lg:order-2">
-//         <div className="flex justify-center font-medium mb-5 text-[#16f2b3] text-3xl mt-5 uppercase">Professional Skillsets</div>
-//         <div className="block sm:hidden">
-//           <EmblaCarousel>
-//             {techIcons.map((Icon, index) => (
-//               <div key={index} className="tech-icons flex justify-center items-center border border-current rounded-md p-2 w-[80vw] h-[80vw]">
-//                 <Icon className="text-[#16f2b3] w-[70%] h-[70%]" />
-//               </div>
-//             ))}
-//           </EmblaCarousel>
-//         </div>
-//         <div className="hidden sm:grid sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-3 gap-3 justify-items-center overflow-x-auto lg:overflow-visible">
-//           {techIcons.map((Icon, index) => (
-//             <div key={index} className="tech-icons flex justify-center items-center border border-current rounded-md p-2">
-//               <Icon className="w-[80vw] h-[80vw] sm:w-[100vw] sm:h-[40vw] md:h-[15vw] lg:h-[10vw] max-w-[100%] max-h-[45%] text-[#16f2b3]" />
-//             </div>
-//           ))}
-//         </div>
-//       </div>
-
-//       {/* Some Tools I Use */}
-//       <div className="order-2 lg:order-1">
-//         <div className="flex justify-center font-medium mb-5 text-[#16f2b3] text-3xl mt-5 uppercase">Some tools I use</div>
-//         <div className="block sm:hidden">
-//           <EmblaCarousel>
-//             {toolIcons.map((Icon, index) => (
-//               <div key={index} className="tech-icons flex justify-center items-center border border-current rounded-md p-2 w-[80vw] h-[80vw]">
-//                 <Icon className="text-[#16f2b3] w-[70%] h-[70%]" />
-//               </div>
-//             ))}
-//           </EmblaCarousel>
-//         </div>
-//         <div className="hidden sm:grid sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-3 gap-3 justify-items-center overflow-x-auto lg:overflow-visible">
-//           {toolIcons.map((Icon, index) => (
-//             <div key={index} className="tech-icons flex justify-center items-center border border-current rounded-md p-2">
-//               <Icon className="w-[80vw] h-[80vw] sm:w-[100vw] sm:h-[40vw] md:h-[15vw] lg:h-[10vw] max-w-[100%] max-h-[45%] text-[#16f2b3]" />
-//             </div>
-//           ))}
-//         </div>
-//       </div>
-//     </div>
-//   );
-// }
-
-// export default Skills;
