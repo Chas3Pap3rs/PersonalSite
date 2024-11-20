@@ -11,6 +11,7 @@ export const personalData = {
     github: 'https://github.com/Chas3Pap3rs',
     facebook: '',
     leetcode: 'https://leetcode.com/u/clpoulton/',
+    codepen: 'https://codepen.io/Chas3Pap3rs',
     twitter: '',
     devUsername: "",
     resume: "/resume-chasepoulton.pdf",

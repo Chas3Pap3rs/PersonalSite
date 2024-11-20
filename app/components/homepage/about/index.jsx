@@ -5,7 +5,7 @@ import { personalData } from "@/utils/data/personal-data";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
 import { FaFacebook, FaTwitterSquare } from "react-icons/fa";
 import { FaXTwitter } from 'react-icons/fa6';
-import { SiLeetcode, SiLeetCode } from "react-icons/si";
+import { SiCodepen, SiLeetcode, SiLeetCode } from "react-icons/si";
 
 // Define basePath for environment handling
 const isProduction = process.env.NODE_ENV === "production";
@@ -80,11 +80,11 @@ function About() {
               </Link>
 
               <Link 
-                href={personalData.leetcode}
+                href={personalData.codepen}
                 target='_blank'
                 className="transition-all text-white hover:scale-125 w-[40px] h-[40px] bg-pink-500 rounded-full flex justify-center pt-2 duration-300"
               >
-                <SiLeetcode size={24} />
+                <SiCodepen size={24} />
               </Link>
 
               <Link 
