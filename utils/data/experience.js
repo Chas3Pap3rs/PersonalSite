@@ -58,9 +58,9 @@ export const projects = [
   {
     title: "Roadtrip Fuel Calculator",
     image: "/roadtrip-fuel-calc.png", // Image right after title
-    description: "A simple application that takes your input on location, desired destination, your cars gas mileage and fuel tank size and takes gas prices from both locations averaged and gives you an estimation of fuel costs for your road trip and how many times you will need to stop for gas.",
+    description: "A simple application that takes your input on location, desired destination, your cars gas mileage and fuel tank size and takes gas prices from both locations averaged and gives you an estimation of fuel costs for your road trip and how many times you will need to stop for gas. You will need to input your own API Keys for Google and CollectAPI, enjoy!",
     techUsed: "Javascript, HTML, CSS, Google: Maps & Geocoding API, Collect API",
     ghLink: "https://github.com/Chas3Pap3rs/RoadtripFuelCalculator", 
-    demoLink: "" 
+    demoLink: "https://codepen.io/Chas3Pap3rs/pen/JjgqwLw" 
   },
 ];
