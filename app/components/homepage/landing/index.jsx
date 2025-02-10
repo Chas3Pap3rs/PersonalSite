@@ -38,7 +38,7 @@ function Landing() {
         <div className="order-2 lg:order-2 flex flex-col items-start justify-center p-2 pb-20 md:pb-10 lg:pt-10">
           <h1 className="text-3xl font-bold leading-10 md:font-extrabold lg:text-[2.6rem] lg:leading-[3.5rem]">
             <span className="text-pink-500 text-[16px] uppercase tracking-widest">[ {personalData.name} ]</span><br />
-            { `Visual & Web Designer` }<br />
+            { `Full Stack Developer` }<br />
             <span className="text-[#16f2b3]">{personalData.designation}</span>
           </h1>
 
