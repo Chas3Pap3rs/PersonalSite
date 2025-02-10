@@ -1,9 +1,10 @@
 export const personalData = {
     name: "I'M A PASSIONATE...",
+    title: "Full Stack Developer",
     profile: '/profilepic.png',
     designation: "Based in Knoxville, TN",
-    description: "I’m passionate about Frontend Development and continuously refine my expertise in JavaScript and React to create intuitive, clean, and efficient code. Whether working on playful web applications or complex simulations, I’m driven by learning and innovation, always staying ahead of development trends.",
-    about: "From a young age, I’ve been fascinated by technology and its potential to change the world. With a strong foundation in JavaScript and React, i’m always eager to learn new technologies and tools to improve my skills and create better user experiences. I’m currently seeking opportunities to work with a team of talented developers to build innovative web applications and solve complex problems.",
+    description: "My journey into development began with a deep curiosity for technology, leading me to build websites and explore programming long before pursuing formal education. Over time, I expanded my expertise into both frontend and backend development, working with Java, JavaScript, Python, and SQL, while integrating RESTful APIs and authentication systems to create scalable, data-driven applications. Whether working on playful web applications or complex simulations, I’m driven by continuous learning and innovation, always striving to stay ahead of development trends.",
+    about: "From a young age, I’ve been fascinated by technology and its potential to change the world. My path hasn’t been traditional, but that has only fueled my passion for learning and problem-solving. I’ve worn many hats outside of development—Artist, Realtor, and Technical Coordinator—each role providing unique experiences and perspectives that have shaped my ability to create intuitive and impactful digital experiences. This is something I strive to refine every day. I’m currently seeking opportunities to collaborate with a team of talented developers to build innovative applications and solve complex problems.",
     email: "chasepoulton@gmail.com",
     phone: "865-236-8260",
     location: "Knoxville, Tennessee",
