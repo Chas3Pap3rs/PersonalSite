@@ -71,13 +71,13 @@ function About() {
                 <BsLinkedin size={24} />
               </Link>
 
-              <Link 
+              {/* <Link 
                 href={personalData.facebook}
                 target='_blank'
                 className="transition-all text-white hover:scale-125 w-[40px] h-[40px] bg-pink-500 rounded-full flex justify-center pt-2 duration-300"
               >
                 <FaFacebook size={24} />
-              </Link>
+              </Link> */}
 
               <Link 
                 href={personalData.codepen}
@@ -87,13 +87,13 @@ function About() {
                 <SiCodepen size={24} />
               </Link>
 
-              <Link 
+              {/* <Link 
                 href={personalData.twitter}
                 target='_blank'
                 className="transition-all text-white hover:scale-125 w-[40px] h-[40px] bg-pink-500 rounded-full flex justify-center pt-2 duration-300"
               >
                 <FaXTwitter size={24} />
-              </Link>
+              </Link> */}
             </div>
           </div>
         </div>
