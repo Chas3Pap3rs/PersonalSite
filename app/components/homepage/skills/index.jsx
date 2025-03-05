@@ -56,7 +56,7 @@ function Skills() {
                     {/* Normal grid layout for larger screens */}
                     <div className="hidden sm:grid sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-3 gap-3 justify-items-center">
                         {techIcons.map((Icon, index) => (
-                            <div key={index} className="tech-icons flex justify-center items-center border border-current rounded-md p-2">
+                            <div key={index} className="tech-icons flex justify-center items-center border dark-mode-border rounded-md p-2">
                                 <Icon className="w-[80vw] h-[80vw] sm:w-[100vw] sm:h-[40vw] md:h-[15vw] lg:h-[10vw] max-w-[100%] max-h-[45%] text-[#16f2b3]" />
                             </div>
                         ))}
@@ -73,7 +73,7 @@ function Skills() {
                     <div className="block sm:hidden">
                         <EmblaCarousel reverse={true} speed={1.5}> {/* Faster and reverse scrolling */}
                             {toolIcons.map((Icon, index) => (
-                                <div key={index} className="tech-icons flex-shrink-0 flex justify-center items-center border border-current rounded-md p-2 w-[75vw] h-[75vw] mx-3">
+                                <div key={index} className="tech-icons flex-shrink-0 flex justify-center items-center border dark-mode-border rounded-md p-2 w-[75vw] h-[75vw] mx-3">
                                     <Icon className="text-[#16f2b3] w-[70%] h-[70%]" />
                                 </div>
                             ))}
@@ -83,7 +83,7 @@ function Skills() {
                     {/* Normal grid layout for larger screens */}
                     <div className="hidden sm:grid sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-3 gap-3 justify-items-center">
                         {toolIcons.map((Icon, index) => (
-                            <div key={index} className="tech-icons flex justify-center items-center border border-current rounded-md p-2">
+                            <div key={index} className="tech-icons flex justify-center items-center border dark-mode-border rounded-md p-2">
                                 <Icon className="w-[80vw] h-[80vw] sm:w-[100vw] sm:h-[40vw] md:h-[15vw] lg:h-[10vw] max-w-[100%] max-h-[45%] text-[#16f2b3]" />
                             </div>
                         ))}
