@@ -46,7 +46,7 @@ function Skills() {
                     <div className="block sm:hidden">
                         <EmblaCarousel speed={.75}> {/* Slower scrolling */}
                             {techIcons.map((Icon, index) => (
-                                <div key={index} className="tech-icons flex-shrink-0 flex justify-center items-center border border-current rounded-md p-2 w-[62.5vw] h-[62.5vw] mx-3">
+                                <div key={index} className="tech-icons flex-shrink-0 flex justify-center items-center border dark-mode-border rounded-md p-2 w-[62.5vw] h-[62.5vw] mx-3">
                                     <Icon className="text-[#16f2b3] w-[70%] h-[70%]" />
                                 </div>
                             ))}

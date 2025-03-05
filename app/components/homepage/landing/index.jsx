@@ -36,13 +36,13 @@ function Landing() {
 
       <div className="grid grid-cols-1 items-start lg:grid-cols-2 lg:gap-12 gap-y-8 mt-6">
         <div className="order-2 lg:order-2 flex flex-col items-start justify-center p-2 pb-20 md:pb-10 lg:pt-10">
-          <h1 className="text-3xl font-bold leading-10 md:font-extrabold lg:text-[2.6rem] lg:leading-[3.5rem]">
+          <h1 className="text-3xl font-bold leading-10 md:font-extrabold lg:text-[2.6rem] lg:leading-[3.5rem] dark-mode-text">
             <span className="text-pink-500 text-[16px] uppercase tracking-widest">[ {personalData.name} ]</span>
-            <br />{personalData.title}<br />
+            <br /><span className="dark-mode-text">{personalData.title}</span><br />
             <span className="text-[#16f2b3]">{personalData.designation}</span>
           </h1>
 
-          <p className="text-[18px] my-5 leading-10">
+          <p className="text-[18px] my-5 leading-10 dark-mode-text">
             {personalData.description}
           </p>
 

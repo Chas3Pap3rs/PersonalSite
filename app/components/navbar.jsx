@@ -60,7 +60,7 @@ function Navbar() {
             src={imageSrc}
             alt="logo"
             width={imageSrc.includes("chasepoulton-com") ? 400 : imageSrc.includes("chasepoulton") ? 325 : 100}
-            height={100}
+            height={imageSrc.includes("/CP.png") ? 80 : 100}
             className="responsive-logo"
           />
         </div>
