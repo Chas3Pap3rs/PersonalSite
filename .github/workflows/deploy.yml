@@ -30,5 +30,6 @@ jobs:
           server: 149.100.151.39 # Hostinger FTP server
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftps  # Try using FTPS instead of FTP
           local-dir: out/  # Ensure this is the correct output directory with trailing slash
           server-dir: /public_html/  # The directory on Hostinger where files should be uploaded
