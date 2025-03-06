@@ -15,5 +15,5 @@ export const personalData = {
     codepen: 'https://codepen.io/Chas3Pap3rs',
     twitter: '',
     devUsername: "",
-    resume: "/resume-chasepoulton.pdf",
+    resume: "/ChasePoulton_Resume_2-26-25.pdf",
 }
