@@ -9,7 +9,11 @@ import Footer from "./components/footer";
 
 export const metadata = {
   title: "chasepoulton.com",
-  description: "Next JS Development",
+  description: "Portfolio website for Chase Poulton",
+  icons: {
+    icon: '/CP.png', // This will be used as favicon
+    apple: '/CP.png',  // For Apple devices
+  },
 };
 
 export default function RootLayout({ children }) {
