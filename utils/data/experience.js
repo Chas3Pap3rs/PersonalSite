@@ -1,11 +1,11 @@
 export const projects = [
   {
     title: "Artist Website (chas3pap3rs.com)",
-    image: "/under-construction.jpg",
+    image: "/chas3pap3rs-home.png",
     description: "A personal/business website showcasing music releases for artist Chas3 Pap3rs. Built using HTML, CSS, Bootstrap, and GitHub, with hosting on Hostinger. Includes a working contact form built with Formspree.",
     techUsed: "HTML, CSS, Bootstrap, Formspree, GitHub",
     ghLink: "https://github.com/Chas3Pap3rs/ArtistWebsite", 
-    demoLink: "https://chasepoulton.com" 
+    demoLink: "https://chas3pap3rs.com" 
   },
   {
     title: "IDGIF.com",
