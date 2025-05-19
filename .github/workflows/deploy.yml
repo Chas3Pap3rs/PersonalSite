@@ -30,6 +30,6 @@ jobs:
           server: 149.100.151.39 # Hostinger FTP server
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          protocol: sftp
+          protocol: ftp
           local-dir: ./out/ # Next.js static export directory
           server-dir: /public_html/  # The directory on Hostinger where files should be uploaded
