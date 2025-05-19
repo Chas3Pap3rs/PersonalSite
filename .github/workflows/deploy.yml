@@ -32,5 +32,5 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           protocol: ftp
           local-dir: ./out/ # Next.js static export directory
-          server-dir: /public_html  # The directory on Hostinger where files should be uploaded
+          server-dir: /public_html/  # The directory on Hostinger where files should be uploaded
           dangerous-clean-slate: true  # Remove existing files before uploading
