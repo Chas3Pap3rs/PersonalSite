@@ -27,10 +27,10 @@ jobs:
       - name: Deploy to Hostinger via FTP
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
         with:
-          server: 149.100.151.39 # Hostinger FTP server
-          username: ${{ secrets.FTP_USERNAME }}
+          server: 82.29.199.62 # Hostinger FTP server
+          username: ${{ secrets.FTP_USERNAME }} # FTP username with domain
           password: ${{ secrets.FTP_PASSWORD }}
           protocol: ftp
           local-dir: ./out/ # Next.js static export directory
-          server-dir: /public_html/  # The directory on Hostinger where files should be uploaded
+          server-dir: /public_html  # The directory on Hostinger where files should be uploaded
           dangerous-clean-slate: true  # Remove existing files before uploading
