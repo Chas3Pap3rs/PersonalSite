@@ -21,10 +21,8 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Build and Export Next.js Project
-        run: |
-          npm run build
-          npm run export || exit 1
+      - name: Build Next.js Project
+        run: npm run build
 
       - name: Deploy to Hostinger via FTP
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
