@@ -22,14 +22,16 @@ jobs:
         run: npm install
 
       - name: Build and Export Next.js Project
-        run: npm run build
+        run: |
+          npm run build
+          npm run export || exit 1
 
       - name: Deploy to Hostinger via FTP
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
         with:
-          server: 145.223.106.121 # Hostinger FTP server
+          server: 149.100.151.39 # Hostinger FTP server
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          protocol: ftp
-          local-dir: out/  # Ensure this is the correct output directory with trailing slash
+          protocol: ftps
+          local-dir: ./out/ # Next.js static export directory
           server-dir: /public_html/  # The directory on Hostinger where files should be uploaded
