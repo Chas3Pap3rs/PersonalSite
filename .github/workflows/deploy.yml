@@ -1,9 +1,7 @@
-name: Deploy to Hostinger
-
+name: Deploy to VPS
 on:
   push:
-    branches:
-      - main  # Branch you want to deploy from
+    branches: [ main ]
 
 jobs:
   build-and-deploy:
@@ -13,24 +11,38 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
           node-version: '20'
+          cache: 'npm'
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
-      - name: Build Next.js Project
+      - name: Build static site
         run: npm run build
 
-      - name: Deploy to Hostinger via FTP
-        uses: SamKirkland/FTP-Deploy-Action@4.3.0
-        with:
-          server: 82.29.199.62 # Hostinger FTP server
-          username: ${{ secrets.FTP_USERNAME }} # FTP username with domain
-          password: ${{ secrets.FTP_PASSWORD }}
-          protocol: ftps-legacy # Try legacy FTPS mode
-          local-dir: ./out/ # Next.js static export directory
-          server-dir: /public_html/  # The directory on Hostinger where files should be uploaded
-          dangerous-clean-slate: true  # Remove existing files before uploading
+      - name: Verify build output
+        run: |
+          echo "Build output directory contents:"
+          ls -la out/
+          echo "Total size:"
+          du -sh out/
+
+      - name: Deploy to VPS via rsync
+        env:
+          VPS_SSH_KEY: ${{ secrets.VPS_SSH_KEY }}
+          VPS_HOST: ${{ secrets.VPS_HOST }}
+          VPS_USER: ${{ secrets.VPS_USER }}
+          VPS_TARGET_DIR: ${{ secrets.VPS_TARGET_DIR }}
+        run: |
+          mkdir -p ~/.ssh
+          echo "$VPS_SSH_KEY" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          ssh-keyscan -H $VPS_HOST >> ~/.ssh/known_hosts
+          rsync -avz --delete \
+            -e "ssh -i ~/.ssh/deploy_key -o StrictHostKeyChecking=no" \
+            out/ \
+            $VPS_USER@$VPS_HOST:$VPS_TARGET_DIR
+          echo "Deployment complete to $VPS_TARGET_DIR"
